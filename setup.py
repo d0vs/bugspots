@@ -9,7 +9,7 @@ setup(
 	long_description=bugspots.__doc__,
 	author=bugspots.__author__,
 	author_email="bmbslice@gmail.com",
-	url="http://pypi.python.org/pypi/bugspots",
+	url="http://pypi.python.org/pypi/Bugspots",
 	py_modules=["bugspots"],
 	license=bugspots.__license__,
 	classifiers=[
