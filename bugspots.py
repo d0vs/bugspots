@@ -18,9 +18,6 @@ repository::
 	 0.996 src/manipulation.js
 	 0.906 src/effects.js
 
-:copyright: (c) 2011-2012, bslice
-:license: ISC License (see COPYING file for details)
-
 """
 
 from __future__ import division
