@@ -4,8 +4,8 @@ import bugspots
 setup(
 	name="bugspots",
 	version=bugspots.__version__,
-	description="""Identify hot spots in a codebase with the bug prediction
-	algorithm used at Google.""",
+	description="Identify hot spots in a codebase with the bug prediction "
+	"algorithm used at Google.",
 	long_description=bugspots.__doc__,
 	author=bugspots.__author__,
 	author_email="bmbslice@gmail.com",
