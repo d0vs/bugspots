@@ -2,16 +2,17 @@ from distutils.core import setup
 import bugspots
 
 setup(
-	name="Bugspots",
+	name="bugspots",
 	version=bugspots.__version__,
 	description="Identify hot spots in a codebase with the bug prediction \
 	algorithm used at Google",
 	long_description=bugspots.__doc__,
 	author=bugspots.__author__,
 	author_email="bmbslice@gmail.com",
-	url="http://pypi.python.org/pypi/Bugspots",
+	url="http://pypi.python.org/pypi/bugspots",
 	py_modules=["bugspots"],
 	license=bugspots.__license__,
+	platforms="Unix",
 	classifiers=[
 		"Development Status :: 4 - Beta",
 		"Environment :: Console",
