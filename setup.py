@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 import bugspots
 
 setup(
@@ -12,6 +12,7 @@ setup(
 	url="http://pypi.python.org/pypi/bugspots",
 	py_modules=["bugspots"],
 	scripts=["bugspots.py"],
+	install_requires=["GitPython>=0.3"],
 	license=bugspots.__license__,
 	platforms="Unix",
 	classifiers=[
