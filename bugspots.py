@@ -96,7 +96,7 @@ if __name__ == "__main__":
 	                    specified regular expression (not case-sensitive)""",
 	                    metavar="FILTER")
 	parser.add_argument("-V", "--version", action="version",
-		                version="Bugspots %s" % __version__)
+		                version="bugspots %s" % __version__)
 	parser.set_defaults(branch="master", depth=500,
 	                    grep="(fix(e[sd])?|close[sd]?) #[1-9][0-9]*")
 	
