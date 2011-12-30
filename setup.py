@@ -11,6 +11,7 @@ setup(
 	author_email="bmbslice@gmail.com",
 	url="http://pypi.python.org/pypi/bugspots",
 	py_modules=["bugspots"],
+	scripts=["bugspots.py"],
 	license=bugspots.__license__,
 	platforms="Unix",
 	classifiers=[
