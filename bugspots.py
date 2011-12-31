@@ -22,6 +22,13 @@ repository::
 
 from __future__ import division
 
+import git
+import re
+import collections
+import time
+import math
+import operator
+
 __author__ = "A.B."
 __version__ = "0.1"
 __license__ = "ISC License"
@@ -46,9 +53,6 @@ class Bugspots(object):
 	def _get_commits(self):
 		"""Return matching commits among the last `self._depth` ones."""
 		# TODO: filter files that are no longer at HEAD
-		import git
-		import re
-		
 		repo = git.Repo(".")
 		commits = list()
 		
@@ -61,11 +65,6 @@ class Bugspots(object):
 	
 	def get_hot_spots(self):
 		"""Return the top 10% hot spots."""
-		import collections
-		import time
-		import math
-		import operator
-		
 		commits = self._get_commits()
 		scores = collections.defaultdict(int)
 		
