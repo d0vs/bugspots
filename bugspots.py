@@ -22,7 +22,7 @@ repository::
 
 from __future__ import division
 
-__author__ = "bslice"
+__author__ = "A.B."
 __version__ = "0.1"
 __license__ = "ISC License"
 

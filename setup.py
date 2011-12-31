@@ -8,7 +8,7 @@ setup(
 	"algorithm used at Google.",
 	long_description=bugspots.__doc__,
 	author=bugspots.__author__,
-	author_email="bmbslice@gmail.com",
+	author_email="pickusr@gmail.com",
 	url="http://pypi.python.org/pypi/bugspots",
 	py_modules=["bugspots"],
 	scripts=["bugspots.py"],
