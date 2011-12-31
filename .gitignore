@@ -1,4 +1,5 @@
 build/
+bugspots.egg-info/
 dist/
 *.pyc
 MANIFEST
