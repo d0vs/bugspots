@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# vim: set expandtab tabstop=4 shiftwidth=4 autoindent smartindent
+# vim: set expandtab tabstop=4 shiftwidth=4 textwidth=79
 """
 Bugspots is a Python implementation of the bug prediction algorithm used at
 Google. (see http://bitly.com/uglCGz)
