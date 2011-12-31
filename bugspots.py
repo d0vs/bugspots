@@ -26,7 +26,7 @@ __author__ = "A.B."
 __version__ = "0.1"
 __license__ = "ISC License"
 
-class Bugspots:
+class Bugspots(object):
 	"""Implementation of the bug prediction algorithm used at Google."""
 	
 	def __init__(self, branch="master", depth=500,
