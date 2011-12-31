@@ -26,7 +26,6 @@ from __future__ import division
 import git
 import re
 import collections
-import time
 import math
 import operator
 
@@ -70,7 +69,7 @@ class Bugspots(object):
         scores = collections.defaultdict(int)
         
         first_commit_time = commits[-1]["time"]
-        repo_age = int(time.time()) - first_commit_time
+        repo_age = commits[0]["time"] - first_commit_time
         
         for commit in commits:
             ti = (commit["time"] - first_commit_time) / repo_age
