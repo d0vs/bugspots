@@ -73,7 +73,7 @@ class Bugspots:
 		repo_age = int(time.time()) - first_commit_time
 		
 		for commit in commits:
-			ti = ((commit["time"] - first_commit_time) / repo_age)
+			ti = (commit["time"] - first_commit_time) / repo_age
 			
 			for filename in commit["filenames"]:
 				scores[filename] += 1 / (1 + math.exp(-12 * ti + 12))
