@@ -11,7 +11,7 @@ setup(
     long_description=bugspots.__doc__,
     author=bugspots.__author__,
     author_email="pickusr@gmail.com",
-    url="http://pypi.python.org/pypi/bugspots",
+    url="https://github.com/d0vs/bugspots",
     py_modules=["bugspots"],
     scripts=["bugspots.py"],
     install_requires=["GitPython>=0.3"],
