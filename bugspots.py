@@ -66,6 +66,10 @@ class Bugspots(object):
     def get_hot_spots(self):
         """Return the top 10% hot spots."""
         commits = self._get_commits()
+        
+        if len(commits) == 0:
+            return []
+        
         scores = collections.defaultdict(int)
         
         first_commit_time = commits[-1]["time"]
