@@ -11,6 +11,7 @@ from __future__ import division
 import subprocess
 import itertools
 import collections
+import os
 import math
 import operator
 
@@ -49,16 +50,18 @@ class File(Bunch):
 class Bugspots(object):
     """Implementation of the bug prediction algorithm used at Google."""
     
-    def __init__(self, depth=500,
+    def __init__(self, path=".", depth=500,
                  grep="(fix(e[sd])?|close[sd]?) #[1-9][0-9]*"):
         """
         Constructor.
         
+        :param string path: Path to the Git repository.
         :param integer depth: Depth of the log crawl.
         :param string grep: Case insensitive regular expression used to match
                             commits.
         
         """
+        self._path = path
         self._depth = depth
         self._grep = grep
     
@@ -110,7 +113,9 @@ class Bugspots(object):
         :rtype: list of :py:obj:`Hotspot` objects
         
         """
-        files = self._get_files()
+        prev_path = os.getcwd()
+        os.chdir(self._path)
+        
         repo_start = int(subprocess.check_output(
             ["git", "log", "-1", "--format=%ct", "-E", "-i",
              "--grep=%s" % self._grep, "--diff-filter=ACDMRTUXB"]))
@@ -119,6 +124,9 @@ class Bugspots(object):
              "--grep=%s" % self._grep, "--diff-filter=ACDMRTUXB",
              "--reverse"]).split("\n")[0])
         repo_age = repo_end - repo_start
+        
+        files = self._get_files()
+        os.chdir(prev_path)
         
         return sorted([Hotspot(filename=f.name,
                                score=self._get_score(f, repo_start, repo_age))
@@ -145,7 +153,7 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    b = Bugspots(args.depth, args.grep)
+    b = Bugspots(depth=args.depth, grep=args.grep)
     print "Scanning repository..."
     
     hotspots = b.get_hotspots()
