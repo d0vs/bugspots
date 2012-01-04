@@ -1,0 +1,4 @@
+ * Unit testing.
+ * Add ability to choose number of returned hot spots.
+ * Do something about that list comprehension in :meth:get_hotspots().
+ * See if we can safely increase :py:attr:Bugspots._grep.

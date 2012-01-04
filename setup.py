@@ -1,6 +1,10 @@
 # -*- encoding: utf-8 -*-
 # vim: set expandtab tabstop=4 shiftwidth=4 textwidth=79
-from setuptools import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
 import bugspots
 
 setup(
@@ -14,7 +18,6 @@ setup(
     url="https://github.com/d0vs/bugspots",
     py_modules=["bugspots"],
     scripts=["bugspots.py"],
-    install_requires=["GitPython>=0.3"],
     license=bugspots.__license__,
     platforms="Unix",
     classifiers=[
@@ -28,6 +31,4 @@ setup(
         "Programming Language :: Python :: Implementation :: CPython",
         "Topic :: Software Development :: Bug Tracking",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "Topic :: Utilities"
-    ]
-)
+        "Topic :: Utilities"])
