@@ -26,13 +26,13 @@ that are no longer at `HEAD`.
 Any commit whose purpose is to fix an issue.  They are identified by message,
 using [the same pattern as GitHub][2], which is:
 
-        (?i)(fix(e[sd])?|close[sd]?) #[1-9][0-9]*
+	(?i)(fix(e[sd])?|close[sd]?) #[1-9][0-9]*
 
  [2]: https://github.com/blog/831-issues-2-0-the-next-generation
 
 ### What is the formula used?
 
-        score = Sum[1 / (1 + e^(-12 * t_i + 12)), i=0, n]
+	score = Sum[1 / (1 + e^(-12 * t_i + 12)), i=0, n]
 
 where *t_i* is the timestamp of the *i*th commit, normalized between 0 and 1
 (0 being the date of the first commit in the repository and 1 being the date of
@@ -40,16 +40,16 @@ the last commit in the repository), and *n* is the number of bug-fixing commits.
 
 ## Installation
 
-        $ pip install bugspots
+	$ pip install bugspots
 
 ## Command-line usage
 
-        $ bugspots.py -h
+	$ bugspots.py -h
 
 ## Python example
 
-        import bugspots
-        
-        b = bugspots.Bugspots()
-        for hotspot in b.get_hotspots():
-            print " %6.3f %s" % (hotspot.score, hotspot.filename)
+	import bugspots
+	
+	b = bugspots.Bugspots()
+	for hotspot in b.get_hotspots():
+	    print " %6.3f %s" % (hotspot.score, hotspot.filename)
