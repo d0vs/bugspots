@@ -3,3 +3,4 @@
  * Do something about that list comprehension in :meth:get_hotspots().
  * See if we can safely increase :py:attr:Bugspots._grep.
  * Change script name in "usage:" of ``bugspots.py -h``.
+ * Maybe rename some args?
