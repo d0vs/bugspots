@@ -9,7 +9,7 @@ of a Git repository.
 
  [1]: http://google-engtools.blogspot.com/2011/12/bug-prediction-at-google.html
 
-## What is a hot spot?
+### What is a hot spot?
 
 A hot spot is a file where bugs tend to be introduced in a more significant
 matter.
