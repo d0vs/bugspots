@@ -11,8 +11,7 @@ of a Git repository.
 
 ### What is a hot spot?
 
-A hot spot is a file where bugs tend to be introduced in a more significant
-matter.
+A hot spot is merely a file that is bug-prone.
 
 ## How does it work?
 
@@ -32,11 +31,13 @@ using [the same pattern as GitHub][2], which is:
 
 ### What is the formula used?
 
-	score = Sum[1 / (1 + e^(-12 * t_i + 12)), i=0, n]
+![`\textrm{score}{\left(i\right)}=\sum_{i=0}^n\frac{1}{1+e^{\left(-12t_i+12\right)}}`][3]
 
-where *t_i* is the timestamp of the *i*th commit, normalized between 0 and 1
+where *t<sub>i</sub>* is the timestamp of the *i*th commit, normalized between 0 and 1
 (0 being the date of the first commit in the repository and 1 being the date of
 the last commit in the repository), and *n* is the number of bug-fixing commits.
+
+ [3]: http://goo.gl/Uoave
 
 ## Installation
 
