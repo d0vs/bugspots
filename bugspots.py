@@ -118,11 +118,11 @@ class Bugspots(object):
         
         repo_start = int(subprocess.check_output(
             ["git", "log", "-1", "--format=%ct", "-E", "-i",
-             "--grep=%s" % self._grep, "--diff-filter=ACDMRTUXB"]))
+             "--grep=%s" % self._grep, "--diff-filter=ACDMRTUXB"]) or -1)
         repo_end = int(subprocess.check_output(
             ["git", "log", "-%d" % self._depth, "--format=%ct", "-E", "-i",
              "--grep=%s" % self._grep, "--diff-filter=ACDMRTUXB",
-             "--reverse"]).split("\n")[0])
+             "--reverse"]).split("\n")[0] or -1)
         repo_age = repo_end - repo_start
         
         files = self._get_files()
