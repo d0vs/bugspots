@@ -48,8 +48,9 @@ the last commit in the repository), and *n* is the number of bug-fixing commits.
 
 ## Python example
 
-	import bugspots
-	
-	b = bugspots.Bugspots()
-	for hotspot in b.get_hotspots():
-	    print " %6.3f %s" % (hotspot.score, hotspot.filename)
+```python
+import bugspots
+b = bugspots.Bugspots()
+for hotspot in b.get_hotspots():
+    print " %6.3f %s" % (hotspot.score, hotspot.filename)
+```
