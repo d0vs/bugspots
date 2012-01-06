@@ -1,6 +1,7 @@
  * Unit testing.
  * Add ability to choose number of returned hot spots.
- * Do something about that list comprehension in :meth:get_hotspots().
- * See if we can safely increase :py:attr:Bugspots._grep.
- * Change script name in "usage:" of ``bugspots.py -h``.
+ * Do something about that list comprehension in Bugspots.get_hotspots().
+ * See if we can safely increase Bugspots._grep.
+ * Change script name in "usage:" of `bugspots.py -h`.
  * Maybe rename some args?
+ * Add ability to select branch in Bugspots.__init__()?
